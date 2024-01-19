@@ -1,31 +1,24 @@
-import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
 
-function App() {
-	const [count, setCount] = useState(0);
+import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 
-	return (
-		<>
-			<div>
-				<a href='https://vitejs.dev' target='_blank' rel='noreferrer'>
-					<img src={viteLogo} className='logo' alt='Vite logo' />
-				</a>
-				<a href='https://react.dev' target='_blank' rel='noreferrer'>
-					<img src={reactLogo} className='logo react' alt='React logo' />
-				</a>
-			</div>
-			<h1>Vite + React</h1>
-			<div className='card'>
-				<button onClick={() => setCount((count) => count + 1)}>count is {count}</button>
-				<p>
-					Edit <code>src/App.tsx</code> and save to test HMR
-				</p>
-			</div>
-			<p className='read-the-docs'>Click on the Vite and React logos to learn more</p>
-		</>
-	);
+const colors = {
+	primary: {
+		// TODO: Design System Color 정하기
+		100: '#E2E2FF',
+		200: '#8884FF',
+		300: '#38369A',
+		400: '#1D1D6E',
+		500: '#131357',
+	}
 }
 
-export default App;
+const theme = extendTheme({ colors });
+
+export default function App() {
+	return (
+		<ChakraProvider resetCSS theme={theme}>
+
+		</ChakraProvider>
+	);
+}
