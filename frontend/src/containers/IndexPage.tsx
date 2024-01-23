@@ -1,6 +1,6 @@
 import { Button, Card, Carousel } from 'flowbite-react';
 import { TitledCard } from '../components/TitledCard.tsx';
-import Calendar from '../components/Calendar.tsx';
+import { Calendar } from '../components/Calendar.tsx';
 
 import type { CommunityView } from '../types/Community.ts';
 import { RecruitCard } from '../components/RecruitCard.tsx';
